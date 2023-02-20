@@ -1,2 +1,3 @@
-# typescript-template
-A template for TypeScript repositories.
+# ms-plus
+
+A lightweight millisecond parsing utility. Zero dependencies.
