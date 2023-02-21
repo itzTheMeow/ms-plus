@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "pub": "pnpm run prepub && pnpm publish",
-    "prepub": "tsc -b tsconfig.json"
+    "prepub": "tsc -b tsconfig.json",
+    "test": "pnpm run prepub && node test.js"
   },
   "repository": {
     "type": "git",

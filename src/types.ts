@@ -10,3 +10,21 @@ export interface MSLabel {
   /** The milliseconds this unit equates to. */
   value: number;
 }
+
+/** Input example: "1m5s" */
+export interface ParsedUnit {
+  /** The value of this unit. (example: 5) */
+  value: number;
+  /** The label for this unit. (example: MSLabel for minutes) */
+  unit: MSLabel;
+  /** The matched text for this unit. (example: "m") */
+  matched?: string;
+}
+
+export interface FormatStringOptions {
+  verbose?: boolean;
+  space?: boolean;
+  maxDepth?: number;
+  commas?: boolean;
+  conjunction?: boolean;
+}
