@@ -17,8 +17,6 @@ export interface ParsedUnit {
   value: number;
   /** The label for this unit. (example: MSLabel for minutes) */
   unit: MSLabel;
-  /** The matched text for this unit. (example: "m") */
-  matched?: string;
 }
 
 export interface FormatStringOptions {

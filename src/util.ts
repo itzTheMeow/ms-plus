@@ -3,6 +3,9 @@ import { MSLabel } from "./types";
 export function isNum(string: string) {
   return !isNaN(Number(string)) && string != " ";
 }
+export function getTerms(label: MSLabel) {
+  return [label.abbrev, label.singular, label.plural, ...label.aliases].map((l) => l.toLowerCase());
+}
 
 export type NumString<T, STR = string, NUM = number> = T extends number
   ? STR
