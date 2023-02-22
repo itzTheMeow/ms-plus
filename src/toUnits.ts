@@ -16,7 +16,7 @@ export function toUnits(t: string | number): ParsedUnit[] {
           // V      VV Allow spaces between the digit and label.
           `([\d.,]+) *(${
             // Match every term for the label.
-            DEFAULT_LABELS.map(getTerms).join("|")
+            DEFAULT_LABELS.map(getTerms).flat(1).join("|")
             // |= Positive lookahead.
             // V    V===== Ensures there's a "terminator" character after the term.
           })(?=\d| |\n|$|,)`,
@@ -24,6 +24,7 @@ export function toUnits(t: string | number): ParsedUnit[] {
         )
       ),
     ];
+    console.log(matches[0]);
     for (const label of DEFAULT_LABELS) {
       const has = matches.filter((m) => getTerms(label).includes(m[2]?.toLowerCase()));
       for (const h of has) {
