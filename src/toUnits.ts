@@ -14,17 +14,16 @@ export function toUnits(t: string | number): ParsedUnit[] {
         new RegExp(
           // |== Match the digit portion. (100 1,000 0.1)
           // V      VV Allow spaces between the digit and label.
-          `([\d.,]+) *(${
+          `([\\d.,]+) *(${
             // Match every term for the label.
             DEFAULT_LABELS.map(getTerms).flat(1).join("|")
             // |= Positive lookahead.
             // V    V===== Ensures there's a "terminator" character after the term.
-          })(?=\d| |\n|$|,)`,
+          })(?=\\d| |\n|$|,)`,
           "gi"
         )
       ),
     ];
-    console.log(matches[0]);
     for (const label of DEFAULT_LABELS) {
       const has = matches.filter((m) => getTerms(label).includes(m[2]?.toLowerCase()));
       for (const h of has) {
@@ -51,5 +50,5 @@ export function toUnits(t: string | number): ParsedUnit[] {
     }
   }
 
-  return parsed.sort((p1, p2) => p1.unit.value - p2.unit.value);
+  return parsed.sort((p1, p2) => p2.unit.value - p1.unit.value);
 }

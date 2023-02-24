@@ -1,3 +1,3 @@
 const ms = require(".").default;
 
-console.log(ms("10 minutes and 1sec") + " ok");
+console.log(ms("1 sec 1sec").toString());
