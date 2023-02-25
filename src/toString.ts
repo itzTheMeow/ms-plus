@@ -1,8 +1,8 @@
-import { FormatStringOptions, ParsedUnit } from "./types";
+import { FormatMSOptions, ParsedUnit } from "./types";
 
-export function toString(units: ParsedUnit[], options: FormatStringOptions = {}): string {
+export function toString(units: ParsedUnit[], options: FormatMSOptions = {}): string {
   const verbose = typeof options.verbose == "boolean" ? options.verbose : false;
-  const space = verbose ? true : typeof options.space == "boolean" ? options.space : false;
+  /*const space = verbose ? true : typeof options.space == "boolean" ? options.space : false;*/
   const maxDepth =
     typeof options.maxDepth == "number" && Number.isFinite(options.maxDepth)
       ? options.maxDepth == 0
@@ -27,7 +27,7 @@ export function toString(units: ParsedUnit[], options: FormatStringOptions = {})
       formatted = formattedUnits.join(" and ");
     }
   } else {
-    formatted = formattedUnits.join(space ? " " : "");
+    formatted = formattedUnits.join(/*space ? " " : */ "");
   }
 
   return formatted;

@@ -1,6 +1,7 @@
 import { toNumber } from "./toNumber";
 import { toString } from "./toString";
 import { toUnits } from "./toUnits";
+import { FormatMSOptions } from "./types";
 
 export * from "./types";
 
@@ -11,8 +12,8 @@ export default function ms(
   const units = toUnits(val);
   if (!units.length) return null;
   return {
-    toString() {
-      return toString(units);
+    toString(opts?: FormatMSOptions) {
+      return toString(units, opts);
     },
     toNumber() {
       return toNumber(units);

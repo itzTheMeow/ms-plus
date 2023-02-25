@@ -1,6 +1,6 @@
 {
   "name": "ms-plus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A better millisecond conversion utility.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itzTheMeow/FILL.git"
+    "url": "git+https://github.com/itzTheMeow/ms-plus.git"
   },
   "author": "Meow",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/itzTheMeow/FILL/issues"
+    "url": "https://github.com/itzTheMeow/ms-plus/issues"
   },
-  "homepage": "https://github.com/itzTheMeow/FILL#readme",
+  "homepage": "https://github.com/itzTheMeow/ms-plus#readme",
   "files": [
     "dist"
   ],

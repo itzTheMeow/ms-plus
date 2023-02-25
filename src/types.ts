@@ -19,6 +19,14 @@ export interface ParsedUnit {
   unit: MSLabel;
 }
 
+/** Input example: "2m30s10ms" */
+export interface FormatMSOptions {
+  /** Use the long form of the unit (20 minutes, 30 seconds, and 10 milliseconds) */
+  verbose?: boolean;
+  /** The max number of units to include. (default 2) */
+  maxDepth?: number;
+}
+
 export interface FormatStringOptions {
   verbose?: boolean;
   space?: boolean;
