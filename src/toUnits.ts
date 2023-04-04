@@ -39,10 +39,14 @@ export function toUnits(t: string | number): ParsedUnit[] {
         }
       }
     }
-  } else if (typeof t == "number") {
-    let tLeft = t;
+  }
+  if (typeof t == "number" || (!parsed.length && !isNaN(Number(t)))) {
+    let tLeft = Math.abs(Number(t));
     for (const label of DEFAULT_LABELS) {
-      const newUnit: ParsedUnit = { value: Math.floor(tLeft / label.value), unit: label };
+      const newUnit: ParsedUnit = {
+        value: Math.floor(tLeft / label.value),
+        unit: label,
+      };
       if (newUnit.value != 0 || (parsed.length == 0 && label.value == 1)) {
         parsed.push(newUnit);
         tLeft = tLeft % label.value;
