@@ -22,7 +22,7 @@ export interface MSParser {
    * const units = ms("10m5s80ms");
    * // => 10 minutes, 5 seconds, 80 milliseconds
    *
-   * ms.drop(1000);
+   * ms.drop(1);
    * // => 10 minutes, 5 seconds
    *
    * ms.drop(ms("1 minute").toNumber());
