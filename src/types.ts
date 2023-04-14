@@ -7,7 +7,7 @@ export interface MSLabel {
   plural: string;
   /** Any aliases for parsing. (examples: 'min' 'mins') */
   aliases: string[];
-  /** The milliseconds this unit equates to. */
+  /** The milliseconds this unit equates to. (example: 60000) */
   value: number;
 }
 

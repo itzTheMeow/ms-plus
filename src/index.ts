@@ -44,7 +44,7 @@ export default function ms(val: number | string): MSParser | null {
       return toNumber(units);
     },
     drop(dropped) {
-      const i = units.findIndex((u) => u.value == dropped);
+      const i = units.findIndex((u) => u.unit.value == dropped);
       if (i >= 0) units.splice(i, 1);
       return parser;
     },
