@@ -1,4 +1,4 @@
-import { FormatMSOptions, ParsedUnit } from "./types";
+import { FormatMSOptions, ParsedUnit } from "./types.js";
 
 export function toString(units: ParsedUnit[], options: FormatMSOptions = {}): string {
   const verbose = typeof options.verbose == "boolean" ? options.verbose : false;

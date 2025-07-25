@@ -1,4 +1,4 @@
-import { MSLabel } from "./types";
+import { MSLabel } from "./types.js";
 
 export function isNum(string: string) {
   return !isNaN(Number(string)) && string != " ";

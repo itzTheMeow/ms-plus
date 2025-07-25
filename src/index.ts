@@ -1,9 +1,9 @@
-import { toNumber } from "./toNumber";
-import { toString } from "./toString";
-import { toUnits } from "./toUnits";
-import { FormatMSOptions } from "./types";
+import { toNumber } from "./toNumber.js";
+import { toString } from "./toString.js";
+import { toUnits } from "./toUnits.js";
+import { FormatMSOptions } from "./types.js";
 
-export * from "./types";
+export * from "./types.js";
 
 export interface MSParser {
   /**

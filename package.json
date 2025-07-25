@@ -1,7 +1,8 @@
 {
   "name": "ms-plus",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "A better millisecond conversion utility.",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

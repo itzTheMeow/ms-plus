@@ -1,5 +1,5 @@
-import { ParsedUnit } from "./types";
-import { DEFAULT_LABELS, getTerms } from "./util";
+import { ParsedUnit } from "./types.js";
+import { DEFAULT_LABELS, getTerms } from "./util.js";
 
 export function toUnits(t: string | number): ParsedUnit[] {
   const parsed: ParsedUnit[] = [];

@@ -1,3 +1,7 @@
+# v1.0.0
+
+- Convert module to ESM. If you wish to continue using CommonJS, stay on `0.0.6`. CommonJS is no longer supported.
+
 # v0.0.6
 
 - Fix .drop() not dropping correct unit.
